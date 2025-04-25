@@ -293,7 +293,9 @@
     }
 
     function sendCommand() {
-        websocket.send(document.getElementById("command-text").value);
+        const input = document.getElementById("command-text");
+        websocket.send(input.value);
+        input.value = "";
     }
 </script>
 
